@@ -66,15 +66,17 @@ const typed = new Typed(".multiple-text", {
 
 // handle entered user
 async function trackVisitor() {
-  try {
-    const res = await fetch("http://localhost:4500/user-info", {
-      method: "GET",
-    });
-    const data = await res.json();
+  console.log('salom');
+  
+  // try {
+  //   const res = await fetch("http://localhost:4500/user-info", {
+  //     method: "GET",
+  //   });
+  //   const data = await res.json();
 
-    console.log(data);
-  } catch (error) {
-    console.error("Xatolik:", error);
-  }
+  //   console.log(data);
+  // } catch (error) {
+  //   console.error("Xatolik:", error);
+  // }
 }
 window.onload = trackVisitor;
