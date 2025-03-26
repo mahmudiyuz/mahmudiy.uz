@@ -1,26 +1,14 @@
+const servicesOrder = document.querySelector(".services__order");
 const sections = document.querySelectorAll("section");
 const navlinks = document.querySelectorAll("header nav a");
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
-const form = document.querySelector("form");
-const firstName = document.querySelector(".firstName");
-const lastName = document.querySelector(".lastName");
-const email = document.querySelector(".email");
-const phoneNumber = document.querySelector(".phoneNumber");
-const message = document.querySelector(".message");
-const msg = document.querySelector(".msg");
-const msgText = document.querySelector(".msg__text");
-const msgx = document.querySelector(".msg__x");
-const servicesOrder = document.querySelector(".services__order");
-const helpEl = document.querySelector(".help-ai");
 
-// menu part
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
 
-// Navbar links settings
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
@@ -46,7 +34,6 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-// Scroll Reveal
 ScrollReveal({
   distance: "100px",
   duration: 1000,
@@ -68,7 +55,7 @@ ScrollReveal().reveal(".about__img", {
 
 ScrollReveal({ reset: true });
 
-// Typed.js
+// types.js
 const typed = new Typed(".multiple-text", {
   strings: ["Frontend Developer!", "Software engineer!", "Web Developer!"],
   typeSpeed: 35,
@@ -77,18 +64,9 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-// watch user
+// handle entered user
 async function trackVisitor() {
   try {
-    // IP manzilni olish
-    // const ipResponse = await fetch("https://api64.ipify.org?format=json");
-    // const ipData = await ipResponse.json();
-    // const ip = ipData.ip;
-
-    // Qurilma haqida ma'lumot olish
-    // const userAgent = navigator.userAgent;
-
-    // Backendga ma'lumotni yuborish
     const res = await fetch("http://localhost:4500/user-info", {
       method: "GET",
     });
@@ -99,6 +77,4 @@ async function trackVisitor() {
     console.error("Xatolik:", error);
   }
 }
-
-// Sahifa yuklanganda foydalanuvchini kuzatish
 window.onload = trackVisitor;
