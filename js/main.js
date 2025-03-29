@@ -57,7 +57,7 @@ ScrollReveal({ reset: true });
 
 // types.js
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer!", "Software engineer!", "Web Developer!"],
+  strings: ["Frontend developer!", "Software engineer!", "Web developer!"],
   typeSpeed: 35,
   backSpeed: 35,
   backDelay: 1500,
@@ -66,17 +66,16 @@ const typed = new Typed(".multiple-text", {
 
 // handle entered user
 async function trackVisitor() {
-  console.log('salom');
-  
-  // try {
-  //   const res = await fetch("http://localhost:4500/user-info", {
-  //     method: "GET",
-  //   });
-  //   const data = await res.json();
+  try {
+    // git.heroku.com/mahmudiy-uz.git
+    const res = await fetch("https://localhost:4500/user-info", {
+      method: "GET",
+    });
+    const data = await res.json();
 
-  //   console.log(data);
-  // } catch (error) {
-  //   console.error("Xatolik:", error);
-  // }
+    console.log(data);
+  } catch (error) {
+    console.error("Xatolik:", error);
+  }
 }
 window.onload = trackVisitor;
