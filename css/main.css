@@ -185,7 +185,7 @@ span {
 }
 .about__img img {
   width: 25vw;
-  border-radius: 200px;
+  border-radius: 15px;
   animation: floatImg 4s ease-in-out infinite;
 }
 @keyframes floatImg {
@@ -501,6 +501,7 @@ span {
   }
   .about__img img {
     width: 70%;
+    border-radius: 200px;
   }
   .services__list {
     flex-direction: column;
