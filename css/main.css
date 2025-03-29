@@ -85,7 +85,7 @@ section {
   gap: 7rem;
 }
 .home__img img {
-  width: 20vw;
+  width: 300px;
   height: 350px;
   border-radius: 1rem;
   object-fit: cover;
@@ -185,7 +185,7 @@ span {
 }
 .about__img img {
   width: 25vw;
-  border-radius: 1rem;
+  border-radius: 200px;
   animation: floatImg 4s ease-in-out infinite;
 }
 @keyframes floatImg {
@@ -475,7 +475,10 @@ span {
     justify-content: center;
   }
   .home__img img {
-    width: 70%;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 200px;
   }
   .home__content h3 {
     font-size: 2em;
@@ -515,9 +518,6 @@ span {
   }
 }
 @media (max-width: 450px) {
-  .help-ai {
-    bottom: 80px;
-  }
   .home__content h3 {
     font-size: 1.5rem;
   }
